@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProjectShopingModelStoreContainer" CdmEntityContainer="ProjectShopingEntities">
+    <EntitySetMapping Name="Searches">
+      <EntityTypeMapping TypeName="ProjectShopingModel.Search">
+        <MappingFragment StoreEntitySet="Search">
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemPrice" ColumnName="ItemPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserAccounts">
+      <EntityTypeMapping TypeName="ProjectShopingModel.UserAccount">
+        <MappingFragment StoreEntitySet="UserAccount">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ConfirmPassword" ColumnName="ConfirmPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

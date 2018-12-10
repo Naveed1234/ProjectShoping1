@@ -1,0 +1,69 @@
+﻿@model ProjectShoping1.Models.UserAccount
+
+@{
+    ViewBag.Title = "Register";
+}
+<link href="~/Content/Signup.css" rel="stylesheet" />
+
+
+<body id="body">
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+
+
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <div class="box">
+            <h2>Signup user</h2>
+            <form>
+                <div class="inputbox">
+                    @Html.EditorFor(m => m.Name, "", new { htmlAttributes = new { required = "" } })
+                    @Html.ValidationMessageFor(m => m.Name)
+                    <label>Name</label>
+
+                </div>
+                <br />
+
+                <div class="inputbox">
+                    @Html.EditorFor(m => m.Email, "", new { htmlAttributes = new { required = "" } })
+                    @Html.ValidationMessageFor(m => m.Email)
+                    <label>Email</label>
+
+                </div>
+                <br />
+                <div class="inputbox">
+                    @Html.EditorFor(m => m.Password, "", new { htmlAttributes = new { required = "" } })
+                    @Html.ValidationMessageFor(m => m.Password)
+                    <label>Password</label>
+
+                </div>
+             
+                <br />
+                <div class="inputbox">
+                    @Html.EditorFor(m => m.ConfirmPassword, "", new { htmlAttributes = new { required = "" } })
+                    @Html.ValidationMessageFor(m => m.ConfirmPassword)
+                    <label>ConfirmPassword</label>
+
+                </div>
+
+                <input type="submit" class="btn1" value="Signup" />
+
+            </form>
+
+        </div>
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</body>

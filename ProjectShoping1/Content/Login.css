@@ -1,0 +1,88 @@
+﻿#body {
+    background-image: url('back.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+            .box {
+                position: absolute;
+                top: 20%;
+                left: 32%;
+                transform: translate(-50%,-50);
+                width: 500px;
+                height: auto;
+                padding: 50px;
+                background: rgba(0,0,0,.4);
+                border-radius: 20px;
+            }
+
+                .box:hover {
+                    transition: .5s;
+                    box-shadow: 12px 23px 40px rgba(0,0,0,.7);
+                }
+
+                .box h2 {
+                    margin: 0 0 30px;
+                    padding: 0;
+                    color: #fff;
+                    text-align: center;
+                    font-family: poppine;
+                }
+
+                .box .inputbox {
+                    position: relative;
+                }
+
+                    .box .inputbox input {
+                        width: 70%;
+                        padding: 6px 0;
+                        font-size: 13px;
+                        color: #fff;
+                        letter-spacing: 1px;
+                        margin-bottom: 17px;
+                        border: none;
+                        outline: none;
+                        background: transparent;
+                        border-bottom: 1px solid #fff;
+                    }
+
+                    .box .inputbox label {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 10px 0;
+                        font-size: 16px;
+                        color: #fff;
+                        pointer-events: none;
+                        transition: .5s;
+                    }
+
+                    .box .inputbox input:focus ~ label,
+                    .box .inputbox input:valid ~ label {
+                        top: -24px;
+                        left: 0;
+                        color: black;
+                        font-size: 12px;
+                    }
+
+                .box .btn1 {
+                    background: transparent;
+                    width: 90px;
+                    border: none;
+                    outline: none;
+                    background-color: #807d74;
+                    color: #fff;
+                    padding: 10px 10px;
+                    cursor: pointer;
+                }
+
+                    .box .btn1:hover {
+                        background: #171717;
+                    }
+
+            .field-validation-error {
+                color: greenyellow;
+                font-size: 12px;
+            }
